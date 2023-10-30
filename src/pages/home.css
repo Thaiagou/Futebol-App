@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(233, 231, 231);
+}
+.escudo{
+    height: 25px;
+    width: 25px;
+}
+.escudoPartida{
+    height: 50px;
+    width: 50px;
+}
+.divTimes{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    gap: 20px;
+    border-left: none;
+    border-bottom: solid .5px rgb(119, 118, 118);
+    justify-content: space-between;
+}
+.backgroundTimes{
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(161, 161, 161);
+    padding: 20px;
+}
+
+h7{
+    color: rgb(118, 118, 119);
+    font-weight:400;
+}
+
+h4{
+    margin: 0;
+}
+
+.placarTimes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeCasa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.timeVisitante{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+
