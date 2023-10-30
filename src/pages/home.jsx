@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./home.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [times, setTimes] = useState([]);
@@ -100,6 +101,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Link to={'/partidas'}><h2>Partidas</h2></Link>
     </div>
   );
 }
