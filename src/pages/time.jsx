@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import "./time.css"
 import "./home.css";
 import axios from "axios";
 
@@ -7,7 +10,7 @@ export default function Partidas() {
 
   const getTimes = () => {
     axios
-      .get("https://api-futebol.vercel.app/times/partidas")
+      .get(`http://localhost:3000/times/partidas`)
       .then((response) => setPartidas(response.data));
     console.log(partidas);
   };
@@ -44,11 +47,11 @@ export default function Partidas() {
                   gap: "10px",
                   justifyContent: "space-around",
                   alignItems: "center",
-                  marginBottom:'15px'
+                  marginBottom: "15px",
                 }}
               >
                 <div className="placarTimes">
-                  <div className="timeCasa"> 
+                  <div className="timeCasa">
                     <h4>{partida.nome_time_casa}</h4>
                     <img
                       src={partida.escudo_time_casa}
@@ -64,12 +67,12 @@ export default function Partidas() {
                   <h2>{partida.placar_visitante}</h2>
                 </div>
                 <div className="placarTimes">
-                    <div className="timeVisitante">
-                  <h4>{partida.nome_time_visitante}</h4>
-                  <img
-                    src={partida.escudo_time_visitante}
-                    className="escudoPartida"
-                  />{" "}
+                  <div className="timeVisitante">
+                    <h4>{partida.nome_time_visitante}</h4>
+                    <img
+                      src={partida.escudo_time_visitante}
+                      className="escudoPartida"
+                    />{" "}
                   </div>
                 </div>
               </div>
@@ -77,6 +80,9 @@ export default function Partidas() {
           </div>
         </div>
       </div>
+      <Link to={"/"}>
+        <h4>← Tabela</h4>
+      </Link>
     </div>
   );
 }
