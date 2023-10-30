@@ -64,6 +64,8 @@ export default function Home() {
                             ? "orange"
                             : time.posicao >= 7 && time.posicao <= 12
                             ? "rgb(0, 23, 155)"
+                            : time.posicao >= 13 && time.posicao <= 20
+                            ? "black"
                             : "inherit",
                       }}
                     >
