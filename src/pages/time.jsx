@@ -7,7 +7,7 @@ export default function Partidas() {
 
   const getTimes = () => {
     axios
-      .get("http://localhost:3000/partidas")
+      .get("https://api-futebol.vercel.app/times/partidas")
       .then((response) => setPartidas(response.data));
     console.log(partidas);
   };
