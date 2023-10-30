@@ -8,7 +8,7 @@ export default function Home() {
 
   const getTimes = () => {
     axios
-      .get("https://api-futebol.vercel.app/times")
+      .get("http://localhost:3000/times")
       .then((response) => setTimes(response.data));
   };
 
@@ -72,9 +72,9 @@ export default function Home() {
                     >
                       {time.posicao}
                     </h4>
-                    
-                      <img className="escudo" src={time.escudo} />
-                    
+
+                    <img className="escudo" src={time.escudo} />
+
                     <span>
                       <h4>{time.nome}</h4>
                     </span>
@@ -88,12 +88,11 @@ export default function Home() {
                       alignItems: "center",
                     }}
                   >
-                    <h4 style={{width: '25px'}}>
-                        {time.pontos}</h4>
-                    <h4 style={{width: '25px'}}>{time.partidas_jogadas}</h4>
-                    <h4 style={{width: '25px'}}>{time.vitorias}</h4>
-                    <h4 style={{width: '25px'}}>{time.derrotas}</h4>
-                    <h4 style={{width: '20px'}}>{time.empates}</h4>
+                    <h4 style={{ width: "25px" }}>{time.pontos}</h4>
+                    <h4 style={{ width: "25px" }}>{time.partidas_jogadas}</h4>
+                    <h4 style={{ width: "25px" }}>{time.vitorias}</h4>
+                    <h4 style={{ width: "25px" }}>{time.derrotas}</h4>
+                    <h4 style={{ width: "20px" }}>{time.empates}</h4>
                   </div>
                 </div>
               </div>
@@ -101,7 +100,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Link to={'/partidas'}><h2>Partidas</h2></Link>
+      <Link to={`/partidas`}>
+        <h4>Partidas →</h4>
+      </Link>
     </div>
   );
 }

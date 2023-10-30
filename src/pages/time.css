@@ -1,0 +1,24 @@
+.escudoPartida {
+  height: 50px;
+  width: 50px;
+}
+
+.placarTimes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeCasa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.timeVisitante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
