@@ -7,7 +7,7 @@ export default function Home() {
 
   const getTimes = () => {
     axios
-      .get("http://localhost:3000/")
+      .get("https://api-futebol.vercel.app/times")
       .then((response) => setTimes(response.data));
   };
 
